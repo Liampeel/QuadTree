@@ -16,6 +16,6 @@ typedef struct leaf_list NodeList;
 
 void initialiseList (NodeList *nodeList); //initialise List function
 void addNode(NodeList *nodeList, LeafNode *leafNode); //Add node function
-void Listleaves (NodeList *myList, Node *node); //make list function
+void Listleaves (NodeList *treeList, Node *node); //make list function
 
 #endif

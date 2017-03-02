@@ -18,7 +18,7 @@ void printOut(FILE *fp, Node *node)
   return;
 }
 //open the quad.out file
-void writeTree( Node *head)
+void printTree( Node *head)
 {
   FILE *fp = fopen("quad.out","w");
   writeNode (fp,head);
@@ -44,7 +44,7 @@ void writeNode (FILE *fp, Node *node)
   return;
 }
 
-void writeTreeV2 (NodeList *nodeList)
+void printTreeV2 (NodeList *nodeList)
 {
   FILE *fp = fopen("quad.out","w");
   LeafNode *walkNode=nodeList->topNode; //node for walking through the list

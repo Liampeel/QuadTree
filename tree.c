@@ -7,15 +7,28 @@
 int main(int argc, char **argv) //main
 {
   Node *head = makeNode(0.0,0.0,0); //create the head node at level 0
+  //printf("%d",sizeof(*head));
+  //task 2
   makeChildren(head); //split a node to level 1
-  makeChildren(head->child[2]); //split a node to level 2
+
   growTree(head); //grow the tree
-  NodeList myList; //define the list
-  initialiseList(&myList); //initialise the list
-  Listleaves(&myList, head); //add all the lead nodes to list
-  growtreeV2(&myList);
-  growtreeV2(&myList);
-  writeTree(head);
+  printTree(head);//print tree
+
+  //task 3
+/*  NodeList treeList; //define the list
+  initialiseList(&treeList); //initialise the list
+  Listleaves(&treeList, head); //add all the lead nodes to list
+  growtreeV2(&treeList);
+
+
+  NodeList treeList2; //define the list
+  initialiseList(&treeList2); //initialise the list
+  Listleaves(&treeList2, head); //add all the lead nodes to list
+  growtreeV2(&treeList2);
+  printTreeV2(&treeList2);
+  //task 3 end
+*/
+  //destroyNode (head);
 
 //node used for walking through the linked list
   int falseCount = 2;
@@ -39,13 +52,13 @@ int main(int argc, char **argv) //main
     }
     falseCount = falseCount -1 ; //remove slack from the false count
   }
-
-  NodeList myList2 ; //create a linked list of leaf nodes
-  initialiseList(&myList2); //initialise the list
-  Listleaves(&myList2,head); //add nodes to list
-  writeTreeV2(&myList2); //print out the tree
-
+  //task 4
+/*
+  NodeList treeList3 ; //create a linked list of leaf nodes
+  initialiseList(&treeList3); //initialise the list
+  Listleaves(&treeList3,head); //add nodes to list
+  printTreeV2(&treeList3); //print out the tree
   destroyNode (head); //free memory on the tree
-
+*/
   return 0;
 }

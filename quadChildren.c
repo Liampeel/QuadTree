@@ -6,6 +6,7 @@ void makeChildren (Node *parent) //splitting it into 4 children
   double y = parent->xy[1];
   int level = parent->level;
   double hChild = pow(2.0,-(level+1));
+  //task 1
   if (level +1 <= MAX_LEVEL) //if max level has not been reached create children at a higher level
   {
     parent->child[0] = makeNode( x,y, level+1);
